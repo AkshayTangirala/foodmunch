@@ -1,28 +1,103 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Food Munch</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Munch</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-<nav><h1>Food Munch</h1></nav>
+
+<nav>
+    <h1>Food Munch 🍽️</h1>
+</nav>
+
 <header class="hero">
-<h2>Get Delicious Food Anytime</h2>
-<p>Eat Smart & Healthy</p>
-<button>View Menu</button>
+    <h2>Get Delicious Food Anytime</h2>
+    <p>Eat Smart & Healthy</p>
+    <button onclick="scrollToMenu()">View Menu</button>
 </header>
 
-<section><h2>Why Choose Us</h2><p>Fresh food, fast delivery, best quality.</p></section>
-<section><h2>Explore Menu</h2><p>Veg, Non‑Veg, Desserts and More.</p></section>
-<section><h2>Healthy Food</h2><p>Nutritious meals crafted with care.</p></section>
-<section><h2>Delivery & Payment</h2><p>Convenient payment options.</p></section>
-<section><h2>Thank You</h2><p>Redeem your gift voucher.</p></section>
+<section>
+    <h2>Why Choose Us</h2>
+
+    <div class="features">
+        <div class="feature-box">
+            <h3>Fresh Food</h3>
+            <p>Prepared with premium ingredients.</p>
+        </div>
+
+        <div class="feature-box">
+            <h3>Fast Delivery</h3>
+            <p>Delivered right to your doorstep.</p>
+        </div>
+
+        <div class="feature-box">
+            <h3>Best Quality</h3>
+            <p>Healthy and delicious meals.</p>
+        </div>
+    </div>
+</section>
+
+<section id="menu">
+    <h2>Explore Menu</h2>
+
+    <input
+        type="text"
+        id="searchInput"
+        class="search-box"
+        placeholder="Search food..."
+    >
+
+    <div class="filters">
+        <button onclick="filterMenu('All')">All</button>
+        <button onclick="filterMenu('Veg')">Veg</button>
+        <button onclick="filterMenu('Non-Veg')">Non-Veg</button>
+        <button onclick="filterMenu('Dessert')">Dessert</button>
+    </div>
+
+    <div id="menuContainer" class="card-container"></div>
+</section>
+
+<section>
+    <h2>Healthy Food</h2>
+    <p class="center-text">
+        Nutritious meals crafted with care for a healthier lifestyle.
+    </p>
+</section>
+
+<section>
+    <h2>Delivery & Payment</h2>
+    <p class="center-text">
+        Cash, Credit Card, UPI, and Digital Wallets accepted.
+    </p>
+</section>
+
+<section>
+    <h2>Thank You</h2>
+    <p class="center-text">
+        Redeem your gift voucher and enjoy exclusive discounts.
+    </p>
+</section>
+
+<section id="cart-section">
+    <h2>Your Cart</h2>
+
+    <div id="cartItems"></div>
+
+    <h3 id="cartTotal" class="cart-total">
+        Total: $0
+    </h3>
+</section>
 
 <footer>
-<p>Food Munch</p>
-<p>Contact: info@example.com</p>
+    <h3>Food Munch</h3>
+    <p>Made with ❤️ by Akshay</p>
 </footer>
+
+<script src="app.js"></script>
+
 </body>
 </html>
